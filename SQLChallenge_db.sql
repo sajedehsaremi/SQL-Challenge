@@ -102,7 +102,7 @@ CREATE TABLE departments(
   PRIMARY KEY (dept_no)
 );
 COPY departments(dept_no,dept_name)
-FROM '/Users/christinebrown/opt/anaconda3/pkgs/conda-4.8.3-py38_0/info/test/tests/data/tar_traversal/dirsym/tmp/09-SQL/sql-challenge/EmployeesSQL/departments.csv'
+FROM '/http://localhost:8894/tree/Desktop/personal-class/gt-atl-data-pt-06-2021-u-c/09-SQL/02-Homework/Instructions/data/departments.csv'
 DELIMITER ','
 CSV HEADER;
 SELECT * FROM departments;
@@ -116,7 +116,7 @@ CREATE TABLE dept_manager(
   FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 COPY dept_manager(dept_no,emp_no)
-FROM '/Users/christinebrown/opt/anaconda3/pkgs/conda-4.8.3-py38_0/info/test/tests/data/tar_traversal/dirsym/tmp/09-SQL/sql-challenge/EmployeesSQL/dept_manager.csv'
+FROM '/http://localhost:8894/tree/Desktop/personal-class/gt-atl-data-pt-06-2021-u-c/09-SQL/02-Homework/Instructions/data/dept_manager.csv'
 DELIMITER ','
 CSV HEADER;
 SELECT * FROM dept_manager;
@@ -128,7 +128,7 @@ CREATE TABLE salaries(
   FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 COPY salaries(emp_no,salary)
-FROM '/Users/christinebrown/opt/anaconda3/pkgs/conda-4.8.3-py38_0/info/test/tests/data/tar_traversal/dirsym/tmp/09-SQL/sql-challenge/EmployeesSQL/salaries.csv'
+FROM '/http://localhost:8894/tree/Desktop/personal-class/gt-atl-data-pt-06-2021-u-c/09-SQL/02-Homework/Instructions/data/salaries.csv'
 DELIMITER ','
 CSV HEADER;
 SELECT * FROM salaries;
@@ -139,7 +139,7 @@ CREATE TABLE titles(
   title Varchar(30)
 );
 COPY titles(title_id,title)
-FROM '/Users/christinebrown/opt/anaconda3/pkgs/conda-4.8.3-py38_0/info/test/tests/data/tar_traversal/dirsym/tmp/09-SQL/sql-challenge/EmployeesSQL/titles.csv'
+FROM '/http://localhost:8894/tree/Desktop/personal-class/gt-atl-data-pt-06-2021-u-c/09-SQL/02-Homework/Instructions/data/titles.csv'
 DELIMITER ','
 CSV HEADER;
 SELECT * FROM titles;
@@ -152,7 +152,7 @@ CREATE TABLE dept_emp(
   FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );  
 COPY dept_emp(emp_no,dept_no)
-FROM '/Users/christinebrown/opt/anaconda3/pkgs/conda-4.8.3-py38_0/info/test/tests/data/tar_traversal/dirsym/tmp/09-SQL/sql-challenge/EmployeesSQL/dept_emp.csv'
+FROM '/http://localhost:8894/tree/Desktop/personal-class/gt-atl-data-pt-06-2021-u-c/09-SQL/02-Homework/Instructions/data/dept_emp.csv'
 DELIMITER ','
 CSV HEADER;
 SELECT * FROM dept_emp;
